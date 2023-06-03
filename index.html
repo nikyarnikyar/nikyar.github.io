@@ -1,56 +1,29 @@
-<!-- HTML code to implement ondragend event using drag
-and drop event attribute -->
-<!DOCTYPE HTML>
+
+
+<!DOCTYPE html>
 <html>
-<head>
-	<title>ondragend Event Attribute</title>
-	<style>
-		.box {
-			width: 30%;
-			height: 50px;
-			margin: 20px;
-			border: 1px solid black;
-			text-align: center;
-		}
-	</style>
-	<script>
-		/* Function to start dragging */
-		function starts_drag(event) {
-			event.dataTransfer.setData("Text", event.target.id);
-			document.getElementById("demo").innerHTML =
-				"Dragging is in work";
-		}
-		/* Function to stop dragging */
-		function end_drag(event) {
-			document.getElementById("demo").innerHTML =
-				"Dragging works properly";
-		}
-		/* Function to allow drop content */
-		function drop_allow(event) {
-			event.preventDefault();
-		}
-		/* Function to drop the content */
-		function drop_event(event) {
-			event.preventDefault();
-			var data = event.dataTransfer.getData("Text");
-			event.target.appendChild(document.getElementById(data));
-		}
-	</script>
-</head>
-<body>
-	<!-- ondragend event starts from here -->
-	<div class="box" ondrop="drop_event(event)"
-		ondragover="drop_allow(event)">
-		<p ondragstart="starts_drag(event)"
-			ondragend="end_drag(event)" draggable="true" id="gfg">
-			GeeksforGeeks
-		
-<p>
-	</div>
-	<div class="box" ondrop="drop_event(event)"
-		ondragover="drop_allow(event)"></div>
-	<!-- ondragend event complete here -->
-	<p id="demo"></p>
+<body style="background-color:Tomato;">
+<h1 style="color:red;"> PostgreSQL - AUTO INCREMENT <h1>
+<p>I am normal</p>
+<p style="color:red;">I am red</p>
+<p style="color:blue;">I am blue</p>
+<p style="font-size:50px;">I am big</p>
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893. PostgreSQL has the data types smallserial, serial and bigserial; these are not true types, but merely a notational convenience for creating unique identifier columns. These are similar to AUTO_INCREMENT property supported by some other databases.
+
+If you wish a serial column to have a unique constraint or be a primary key, it must now be specified, just like any other data type.
+
+The type name serial creates an integer columns. The type name bigserial creates a bigint column. bigserial should be used if you anticipate the use of more than 231 identifiers over the lifetime of the table. The type name smallserial creates a smallint column.</p> 
+<bdo dir="rtl">This text will be written from right to left</bdo> 
+<address>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+    </address> 
+
+<p>Marking up abbreviations can give useful information to browsers, translation systems and search-engines.</p>
 
 </body>
 </html>
